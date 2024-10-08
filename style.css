@@ -1,0 +1,112 @@
+ @import url('https://googleapis.com/css?family=poppins:300,400,500,700,800,900');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 50px;
+}
+ul li input{
+    position: relative;
+    z-index: 1000;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+ul li .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ul li .slide .face{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #ffffff;
+}
+ul li .slide .face.face1{
+    left: 0;
+    transition: transform 1s;
+    transform-origin: top;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+ul li .slide .face.face1 img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ul li .slide .face.face2{
+    right: 0;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+    transform-origin: bottom;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+ul li .slide .face.face2 h2{
+    font-size: 4em;
+    color: rgba(0, 0, 0, 0.837);
+}
+ul li .slide .face.face2 h2 p{
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.7em ;
+}
+ul li input[type="radio"]:checked ~ .slide .face.face1{
+    transform: rotateX(0deg);
+    transition: transform 1s;
+    transform-origin: bottom;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+ul li input[type="radio"]:checked ~ .slide .face.face2{
+    transform: rotateX(0deg);
+    transition: transform 1s;
+    transform-origin: top;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
